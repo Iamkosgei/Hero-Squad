@@ -7,7 +7,7 @@ public class HeroTest {
     public void createsInstanceOfHero()
     {
         Hero hero = new Hero("Hulk",30,"Strength","Anger issues");
-        assertEquals(true, hero instanceof Hero);
+        assertTrue(hero instanceof Hero);
     }
 
     @Test
