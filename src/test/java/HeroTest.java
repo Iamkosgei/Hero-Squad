@@ -60,6 +60,14 @@ public class HeroTest {
         assertEquals(1,hero.getId());
     }
 
+    @Test
+    public void find_returnsCategoryWithSameId_secondCategory() {
+        Hero.clear();
+        Hero hero = new Hero("Hulk1",40,"Strength","Anger issues");
+        Hero hero1 = new Hero("Hulk1",40,"Strength","Anger issues");
+        assertEquals(Hero.find(hero.getId()), hero);
+    }
+
 
 
 }
