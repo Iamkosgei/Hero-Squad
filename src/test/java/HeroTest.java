@@ -38,4 +38,14 @@ public class HeroTest {
         assertEquals("Anger issues",hero.getWeakness());
     }
 
+    @Test
+    public void all_returns_all_instancesOfHero()
+    {
+        Hero hero = new Hero("Hulk1",40,"Strength","Anger issues");
+        Hero hero1 = new Hero("Hulk",30,"Strength","Anger issues");
+        assertTrue(Hero.all().contains(hero));
+        assertTrue(Hero.all().contains(hero1));
+
+    }
+
 }
