@@ -8,4 +8,16 @@ public class Squad {
         this.name = name;
         this.cause = cause;
     }
+
+    public int getMax_size() {
+        return max_size;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getCause() {
+        return cause;
+    }
 }

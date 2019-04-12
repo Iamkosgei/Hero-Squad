@@ -10,4 +10,11 @@ public class SquadTest {
         assertEquals(true, squad instanceof Squad);
     }
 
+    @Test
+    public void saves_maxSize_5()
+    {
+        Squad squad = new Squad(5,"Squad 1","black lives matter");
+        assertEquals(5, squad.getMax_size());
+    }
+
 }
