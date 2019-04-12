@@ -49,9 +49,17 @@ public class HeroTest {
 
     @Test
     public void clear_emptiesAllCategoriesFromList_0() {
-        Hero testHero = new Hero("Hulk1",40,"Strength","Anger issues");
         Hero.clear();
         assertEquals(Hero.all().size(), 0);
     }
+
+    @Test
+    public void getId_heroInstantiateWithAnId_1() {
+        Hero.clear();
+        Hero hero = new Hero("Hulk1",40,"Strength","Anger issues");
+        assertEquals(1,hero.getId());
+    }
+
+
 
 }
