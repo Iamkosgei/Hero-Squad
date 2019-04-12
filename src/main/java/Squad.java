@@ -48,4 +48,7 @@ public class Squad {
     {
         return heroes;
     }
+    public void addHero(Hero hero) {
+        heroes.add(hero);
+    }
 }

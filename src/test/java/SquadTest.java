@@ -64,4 +64,12 @@ public class SquadTest {
         Squad squad = new Squad(5,"Squad 1","black lives matter");
         assertEquals(0, squad.getHeroes().size());
     }
+
+    @Test
+    public void addsHeroesToList_true() {
+        Squad squad = new Squad(5,"Squad 1","black lives matter");
+        Hero hero = new Hero("Hulk",30,"Strength","Anger issues");
+        squad.addHero(hero);
+        assertTrue(squad.getHeroes().contains(hero));
+    }
 }
