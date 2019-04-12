@@ -31,4 +31,11 @@ public class HeroTest {
         assertEquals("Strength",hero.getSpecial_power());
     }
 
+    @Test
+    public void savesWeakness()
+    {
+        Hero hero = new Hero("Hulk",30,"Strength","Anger issues");
+        assertEquals("Anger issues",hero.getWeakness());
+    }
+
 }
