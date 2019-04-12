@@ -17,4 +17,11 @@ public class HeroTest {
         assertEquals("Hulk",hero.getName());
     }
 
+    @Test
+    public void savesAge()
+    {
+        Hero hero = new Hero("Hulk",30,"Strength","Anger issues");
+        assertEquals(30,hero.getAge());
+    }
+
 }
