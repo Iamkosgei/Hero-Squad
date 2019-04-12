@@ -27,4 +27,15 @@ public class SquadTest {
         Squad squad = new Squad(5,"Squad 1","black lives matter");
         assertEquals("black lives matter", squad.getCause());
     }
+
+    @Test
+    public void all_returns_all_instancesOfSquad()
+    {
+        Squad squad = new Squad(5,"Squad 1","black lives matter");
+        Squad squad2 = new Squad(5,"Squad 1","black lives matter");
+
+        assertEquals(true, Squad.all().contains(squad));
+        assertEquals(true, Squad.all().contains(squad2));
+
+    }
 }
