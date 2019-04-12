@@ -45,7 +45,13 @@ public class HeroTest {
         Hero hero1 = new Hero("Hulk",30,"Strength","Anger issues");
         assertTrue(Hero.all().contains(hero));
         assertTrue(Hero.all().contains(hero1));
+    }
 
+    @Test
+    public void clear_emptiesAllCategoriesFromList_0() {
+        Hero testHero = new Hero("Hulk1",40,"Strength","Anger issues");
+        Hero.clear();
+        assertEquals(Hero.all().size(), 0);
     }
 
 }
