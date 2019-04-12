@@ -33,9 +33,28 @@ public class SquadTest {
     {
         Squad squad = new Squad(5,"Squad 1","black lives matter");
         Squad squad2 = new Squad(5,"Squad 1","black lives matter");
-
         assertTrue(Squad.all().contains(squad));
         assertTrue(Squad.all().contains(squad2));
 
+    }
+
+    @Test
+    public void clear_emptiesAllSquadsFromList_0() {
+        Squad.clear();
+        assertEquals(Squad.all().size(), 0);
+    }
+
+    @Test
+    public void getId_SquadInstantiateWithAnId_1() {
+        Squad.clear();
+        Squad squad = new Squad(5,"Squad 1","black lives matter");
+        assertEquals(1,squad.getId());
+    }
+
+    @Test
+    public void find_returnsCategoryWithSameId_secondCategory() {
+        Squad.clear();
+        Squad squad = new Squad(5,"Squad 1","black lives matter");
+        assertEquals(Squad.find(squad.getId()), squad);
     }
 }

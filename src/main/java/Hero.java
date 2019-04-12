@@ -44,4 +44,8 @@ public class Hero {
     {
         return Id;
     }
+
+    public static Hero find(int id) {
+        return instances.get(id - 1);
+    }
 }
