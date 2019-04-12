@@ -7,7 +7,7 @@ public class SquadTest {
     public void creates_instanceOfSquad()
     {
         Squad squad = new Squad(5,"Squad 1","black lives matter");
-        assertEquals(true, squad instanceof Squad);
+        assertTrue(squad instanceof Squad);
     }
     @Test
     public void saves_maxSize_5()
@@ -34,8 +34,8 @@ public class SquadTest {
         Squad squad = new Squad(5,"Squad 1","black lives matter");
         Squad squad2 = new Squad(5,"Squad 1","black lives matter");
 
-        assertEquals(true, Squad.all().contains(squad));
-        assertEquals(true, Squad.all().contains(squad2));
+        assertTrue(Squad.all().contains(squad));
+        assertTrue(Squad.all().contains(squad2));
 
     }
 }
