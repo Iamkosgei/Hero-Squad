@@ -17,4 +17,18 @@ public class SquadTest {
         assertEquals(5, squad.getMax_size());
     }
 
+    @Test
+    public void saves_squadName_squad_1()
+    {
+        Squad squad = new Squad(5,"Squad 1","black lives matter");
+        assertEquals("Squad 1", squad.getName());
+    }
+
+    @Test
+    public void saves_cause_black_lives_matterl()
+    {
+        Squad squad = new Squad(5,"Squad 1","black lives matter");
+        assertEquals("black lives matter", squad.getCause());
+    }
+
 }
