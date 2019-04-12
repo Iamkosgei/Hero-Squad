@@ -10,4 +10,20 @@ public class Hero {
         this.special_power = special_power;
         this.weakness = weakness;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getSpecial_power() {
+        return special_power;
+    }
+
+    public String getWeakness() {
+        return weakness;
+    }
 }
