@@ -10,4 +10,11 @@ public class HeroTest {
         assertEquals(true, hero instanceof Hero);
     }
 
+    @Test
+    public void savesName()
+    {
+        Hero hero = new Hero("Hulk",30,"Strength","Anger issues");
+        assertEquals("Hulk",hero.getName());
+    }
+
 }
