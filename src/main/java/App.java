@@ -36,8 +36,6 @@ public class App {
             );
         });
 
-
-
         get("squads/new", (req, res) -> {
             Map<String, Object> model = new HashMap<>();
             model.put("template", "templates/categories_form.vtl");
@@ -46,6 +44,15 @@ public class App {
             );
         });
 
+        get("/squads/:id", (req, res) -> {
+            Map<String, Object> model = new HashMap<>();
+            Squad squad = Squad.find(Integer.parseInt(req.params(":id")));
+            model.put("squad", squad);
+            model.put("template", "templates/squad.vtl");
+            return new VelocityTemplateEngine().render(
+                    new ModelAndView(model, layout)
+            );
+        });
 
     }
 }
