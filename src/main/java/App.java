@@ -79,5 +79,15 @@ public class App {
                     new ModelAndView(model, layout)
             );
         });
+
+        // 500
+        internalServerError((req, res) -> {
+            Map<String, Object> model = new HashMap<>();
+            //res.type("application/json");
+            model.put("template", "templates/500.vtl");
+            return new VelocityTemplateEngine().render(
+                    new ModelAndView(model, layout)
+            );
+        });
     }
 }
