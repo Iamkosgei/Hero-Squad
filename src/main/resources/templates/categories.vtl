@@ -8,16 +8,17 @@
                 <div class="col-md-4">
                     <div class="card  mb-4 box-shadow text-center">
                         <div class="card-body">
-                            <h5 class="card-title">Squad 1</h5>
-                            <p class="card-text">Some quick example text to build</p>
-                            <ahref="/squads/$squad.getId()">$squad.getName() class="btn btn-primary">Details</a>
-                            <p class="text-muted">Max size: 5</p>
+                            <h5 class="card-title"> $squad.getName() </h5>
+                            <p class="card-text"> $squad.getCause() </p>
+                            <a class="btn btn-primary" href="/squads/$squad.getId()">Details</a>
+                            <p class="text-muted">Max size: $squad.getMax_size()</p>
                         </div>
                     </div>
                 </div>
                  #end
             </div>
+            <a href="/squads/new">Add New Category</a>
         </div>
     </div>
-    <a href="/squads/new">Add New Category</a>
+
 </div>

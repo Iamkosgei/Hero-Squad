@@ -5,8 +5,7 @@ import spark.template.velocity.VelocityTemplateEngine;
 import java.util.HashMap;
 import java.util.Map;
 
-import static spark.Spark.get;
-import static spark.Spark.staticFileLocation;
+import static spark.Spark.*;
 
 public class App {
     public static void main(String[] args) {
@@ -16,7 +15,7 @@ public class App {
         BasicConfigurator.configure();
 
 
-        get("squads", (req, res) -> {
+        get("/squads", (req, res) -> {
             Map<String, Object> model = new HashMap<>();
             model.put("squads", Squad.all());
             model.put("template", "templates/categories.vtl");
@@ -24,6 +23,20 @@ public class App {
                     new ModelAndView(model, layout)
             );
         });
+
+        post("/squads", (req, res) -> {
+            Map<String, Object> model = new HashMap<>();
+            String name = req.queryParams("name");
+            String size = req.queryParams("size");
+            String cause = req.queryParams("cause");
+            Squad squad = new Squad(Integer.parseInt(size),name,cause);
+            model.put("template", "templates/squad-success.vtl");
+            return new VelocityTemplateEngine().render(
+                    new ModelAndView(model, layout)
+            );
+        });
+
+
 
         get("squads/new", (req, res) -> {
             Map<String, Object> model = new HashMap<>();
