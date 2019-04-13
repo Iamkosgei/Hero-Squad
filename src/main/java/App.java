@@ -64,5 +64,20 @@ public class App {
             );
         });
 
+        post("/heroes", (req, res) -> {
+            Map<String, Object> model = new HashMap<>();
+            Squad squad = Squad.find(Integer.parseInt(req.queryParams("squadId")));
+            String name = req.queryParams("name");
+            String age = req.queryParams("age");
+            String special_power = req.queryParams("special_power");
+            String weakness = req.queryParams("special_power");
+            Hero hero = new Hero(name,Integer.parseInt(age),special_power,weakness);
+            squad.addHero(hero);
+            model.put("squad",squad);
+            model.put("template", "templates/heroes-success.vtl");
+            return new VelocityTemplateEngine().render(
+                    new ModelAndView(model, layout)
+            );
+        });
     }
 }
