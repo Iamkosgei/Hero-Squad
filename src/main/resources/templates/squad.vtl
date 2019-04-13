@@ -1,11 +1,18 @@
-<h1>$squad.getName()</h1>
+<div>
 
-<ul>
-  #foreach($hero in $squad.getHeroes())
-   <li>$hero.getName()</li>
-  #end
-</ul>
-
-
-<a href="/squads/$squad.getId()/heroes/new">Add a new Hero</a>
-<a href="/squads">All Squads</a>
+<div class="card text-center" style="width: 38rem;">
+                <div class="card-body">
+                  <h5 class="card-title">$squad.getName()</h5>
+                  <p class="card-text">$squad.getCause()</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                #foreach($hero in $squad.getHeroes())
+                  <li class="list-group-item">$hero.getName()</li>
+                  #end
+                </ul>
+                <div class="card-body">
+                  <a href="/squads/$squad.getId()/heroes/new" class="card-link">Add New Hero</a>
+                  <a href="/squads" class="card-link">All Squads</a>
+                </div>
+              </div>
+</div>
