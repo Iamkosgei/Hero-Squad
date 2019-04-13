@@ -1,7 +1,23 @@
-<h1>All Squads </h1>
-<ul>
-  #foreach ($squad in $squads)
-    <li><a href="/squads/$squad.getId()">$squad.getName()</a></li>
-  #end
-</ul>
-<a href="/squads/new">Add New Category</a
+<div id="right">
+
+    <h1 class="squads">SQUADS</h1>
+    <div class="album py-5 ">
+        <div class="container">
+            <div class="row">
+            #foreach ($squad in $squads)
+                <div class="col-md-4">
+                    <div class="card  mb-4 box-shadow text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Squad 1</h5>
+                            <p class="card-text">Some quick example text to build</p>
+                            <ahref="/squads/$squad.getId()">$squad.getName() class="btn btn-primary">Details</a>
+                            <p class="text-muted">Max size: 5</p>
+                        </div>
+                    </div>
+                </div>
+                 #end
+            </div>
+        </div>
+    </div>
+    <a href="/squads/new">Add New Category</a>
+</div>

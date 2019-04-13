@@ -25,6 +25,14 @@ public class App {
             );
         });
 
+        get("squads/new", (req, res) -> {
+            Map<String, Object> model = new HashMap<>();
+            model.put("template", "templates/categories_form.vtl");
+            return new VelocityTemplateEngine().render(
+                    new ModelAndView(model, layout)
+            );
+        });
+
 
     }
 }
