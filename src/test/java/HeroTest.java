@@ -74,6 +74,11 @@ public class HeroTest {
         assertTrue(Hero.findHeroByName("Hulk1"));
     }
 
+    @Test
+    public void find_returnsNullWhenNoTaskFound_null() {
+        assertTrue(Hero.find(1000) == null);
+    }
+
 
 
 }
