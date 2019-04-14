@@ -17,7 +17,7 @@ A Spark app that allows you to recruit a well-balanced team of superheroes to fi
 
 ## Screenshots
 
-![Screen Shot](/src/main/resources/public/images/ss (1).png)
+![ss (1)](https://user-images.githubusercontent.com/14147462/56093757-1e3efc00-5ed5-11e9-955d-f85fd1ce8707.png)
 
 This is the Home Screen.
 
