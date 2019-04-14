@@ -48,4 +48,18 @@ public class Hero {
     public static Hero find(int id) {
         return instances.get(id - 1);
     }
+
+    public static boolean findHeroByName(String name)
+    {
+        boolean isAvailable = false;
+       for (int i =0; i<instances.size(); i++)
+       {
+            if (name.equalsIgnoreCase(instances.get(i).name) )
+            {
+               isAvailable = true;
+            }
+       }
+
+           return isAvailable;
+    }
 }

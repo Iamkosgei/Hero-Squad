@@ -67,6 +67,13 @@ public class HeroTest {
         assertEquals(Hero.find(hero.getId()), hero);
     }
 
+    @Test
+    public void find_hero_by_name() {
+        Hero.clear();
+        Hero hero = new Hero("Hulk1",40,"Strength","Anger issues");
+        assertTrue(Hero.findHeroByName("Hulk1"));
+    }
+
 
 
 }
