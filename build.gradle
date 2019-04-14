@@ -5,7 +5,12 @@ plugins {
 group 'xyz.kosgei'
 version '1.0-SNAPSHOT'
 
+
+
+apply plugin: 'application'
+mainClassName = 'App'
 archivesBaseName = "Hero-Squad"
+
 
 sourceCompatibility = 1.8
 
