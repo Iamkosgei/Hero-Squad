@@ -21,19 +21,19 @@ A Spark app that allows you to recruit a well-balanced team of superheroes to fi
 
 This is the Home Screen.
 
-![Screen Shot]()
+![ss (2)](https://user-images.githubusercontent.com/14147462/56093763-2860fa80-5ed5-11e9-9baf-c88fd6a8ce42.png)
 
 This is the form where you can create you own squad.
 
-![Screen Shot]()
+![ss (3)](https://user-images.githubusercontent.com/14147462/56093765-2dbe4500-5ed5-11e9-8d4e-c7598829d1cf.png)
 
 You can click on the details to add heroes to your squad.
 
-![Screen Shot]()
+![ss (4)](https://user-images.githubusercontent.com/14147462/56093767-33b42600-5ed5-11e9-8951-050f6723e9a5.png)
 
 Here you can view the heroes in your squad and you can add more heroes to your list.
 
-![Screen Shot]()
+![ss (5)](https://user-images.githubusercontent.com/14147462/56093769-3a429d80-5ed5-11e9-956f-2cf2c1995373.png)
 
 In the above form you can create a hero to add to your squad.
 
