@@ -15,6 +15,16 @@ public class App {
         BasicConfigurator.configure();
 
 
+        get("/", (req, res) -> {
+            System.out.println(Squad.all());
+            Map<String, Object> model = new HashMap<>();
+            model.put("squads", Squad.all());
+            model.put("template", "templates/categories.vtl");
+            return new VelocityTemplateEngine().render(
+                    new ModelAndView(model, layout)
+            );
+        });
+
         get("/squads", (req, res) -> {
             Map<String, Object> model = new HashMap<>();
             model.put("squads", Squad.all());
@@ -71,10 +81,21 @@ public class App {
             String age = req.queryParams("age");
             String special_power = req.queryParams("special_power");
             String weakness = req.queryParams("special_power");
-            Hero hero = new Hero(name,Integer.parseInt(age),special_power,weakness);
-            squad.addHero(hero);
-            model.put("squad",squad);
-            model.put("template", "templates/heroes-success.vtl");
+
+
+            if (Hero.findHeroByName(name.trim()))
+            {
+
+                model.put("template", "templates/heroes-fail.vtl");
+                model.put("squad",squad);
+            }
+            else
+            {
+                Hero hero = new Hero(name,Integer.parseInt(age),special_power,weakness);
+                squad.addHero(hero);
+                model.put("squad",squad);
+                model.put("template", "templates/heroes-success.vtl");
+            }
             return new VelocityTemplateEngine().render(
                     new ModelAndView(model, layout)
             );

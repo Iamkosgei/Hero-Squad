@@ -2,8 +2,7 @@
 <div class="card text-center my-form">
 
 #if($squad.getHeroes().size() < $squad.getMax_size())
-<h1>Add a Hero to $squad.getName()</h1>
-
+<h3>Add a Hero to $squad.getName()</h3>
 <form class="form-inputs" action="/heroes" method="post">
 <div class="form-group">
       <input type="hidden" class="form-control form-control-sm" id="squadId" name="squadId" value="$squad.getId()">
