@@ -44,4 +44,4 @@ In the above form you can create a hero to add to your squad.
 ```
 
 ## License
-Hero Squad was released under [BSD-3](LICENSE)
+Hero Squad was released under [MIT](LICENSE)
