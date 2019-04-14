@@ -8,6 +8,7 @@ version '1.0-SNAPSHOT'
 
 
 apply plugin: 'application'
+applicationName = "Hero-Squad"
 mainClassName = 'App'
 archivesBaseName = "Hero-Squad"
 
