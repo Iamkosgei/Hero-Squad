@@ -16,6 +16,7 @@ A Spark app that allows you to recruit a well-balanced team of superheroes to fi
     3. Run cd to cd build/classes/main then run `java App`
 
 ## Screenshots
+
 ![Screen Shot](/src/main/resources/public/images/ss (1).png)
 
 This is the Home Screen.
