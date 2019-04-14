@@ -1,16 +1,14 @@
 plugins {
     id 'java'
 }
+apply plugin: 'application'
 
 group 'xyz.kosgei'
 version '1.0-SNAPSHOT'
 
-
-
-apply plugin: 'application'
-applicationName = "Hero-Squad"
-mainClassName = 'App'
 archivesBaseName = "Hero-Squad"
+applicationName = "Hero-Squad"
+mainClassName = "App"
 
 
 sourceCompatibility = 1.8
